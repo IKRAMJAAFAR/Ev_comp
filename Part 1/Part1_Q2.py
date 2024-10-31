@@ -23,6 +23,10 @@ for l in length:
 duration = np.array(duration)
 print("Done inputting duration")
 
+print("Length: ", length)
+print("Duration: ", duration)
+print()
+
 # Linear function definition
 def f(x, phi0, phi1):
     return phi0 + phi1 * x

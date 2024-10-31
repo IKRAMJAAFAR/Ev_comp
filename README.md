@@ -28,12 +28,11 @@ Compile your results in a table <br>
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | 1 | 0.5 | one-point | 100 | 1500 | 8 hr | p1_3a_1.py |
 
-
-
 ## Part 2: Creation
+
 <p>
 Experiment with EXTENDED TECHNIQUES (eg: 2 populations, co evo). Compile the results similar to the above table. <br>
-1. Come up with your own formulation of a problem. **Must be creative and not found in Google.**
-2. Example: Optimizing hyperparameters of a Machine Learning problem using EA
-3. You can have "uneven chromosomes" or "weighted chromosomes"
+1. Come up with your own formulation of a problem. **Must be creative and not found in Google.** <br>
+2. Example: Optimizing hyperparameters of a Machine Learning problem using EA <br>
+3. You can have "uneven chromosomes" or "weighted chromosomes" <br>
 </p>

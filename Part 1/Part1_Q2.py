@@ -1,9 +1,10 @@
-import random, datetime, string
+import random, string
 import numpy as np
 import math
+import time
 
-target = "14h!S@A$Qse35DAzx"
-character = string.ascii_letters + string.punctuation
+target = "G7$pQz!9sW@tL4"
+character = string.ascii_letters + string.punctuation + string.digits
 k = len(target)
 char = len(character)
 
@@ -13,12 +14,11 @@ duration = []  # List to store durations
 # Measuring the time for random string generation at various lengths
 print("\nProcessing......")
 for l in length:
-    start = datetime.datetime.now()
+    start = time.time()
     for _ in range(10**6):
         s = ''.join(random.choice(character) for _ in range(l))
-    end = datetime.datetime.now()
-    temp = end - start
-    duration.append(temp.total_seconds())
+    end = time.time()
+    duration.append(end - start)
 
 duration = np.array(duration)
 print("Done inputting duration")
@@ -72,5 +72,6 @@ total_gen = char ** k
 
 # Estimating time in years
 est_time = (total_gen / passwordPerSecond + total_wasted) / 3.15576e+7
-print(f"Total generations: \t{total_gen}")
+print(f"Total generations: \t{len(character)}^{k}")
+print(f"or \t\t\t{total_gen}\n")
 print(f"Estimated time:  \t{est_time} years (approximate)\n")

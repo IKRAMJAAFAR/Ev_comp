@@ -1,0 +1,50 @@
+How fast can a Genetic/Evolution algorithm hack a phone/account pin/password ?
+
+Given that the password follows the requirements below
+
+Target solution : G7$pQz!9sW@tL4
+
+Experiment with 2 fitness function
+a) The usual ones like the monkey problem
+b) For a specific gene, if the value is supposed to be alphabets, but was digits or special chars was selected, add penalty.
+The same goes for if a gene is supposed to be digits but has alphabets instead.
+
+
+1. At least 12 characters long.
+2. A combination of uppercase letters, lowercase letters, numbers, and symbols.
+3. Not a word that can be found in a dictionary or the name of a person, character, product, or organization
+
+You can try 5 times, then the phone/account will be locked for 5 secs before you can try again. So you need to introduce
+a 'pause' /timer in your code. 
+
+
+-------------------------------------------------------------------------------------------------------------------------
+Part I (20marks)
+
+Q1. How many generations do you need to hack it?
+
+Q2. How much time do you need to hack it?
+
+Q3. Experiment with
+1. Mutation only
+2. Crossover only
+3. Mutation + crossover
+4. Population size
+5. Crossover techniques (two point cross overs etc.)
+
+Compile your results in a table like below
+
+No of Exp |Mutation rate |Cross over technique | Population Size | Generations to solve | Time Complexity | .py 
+1		0.5		one point		100		15000			8hrs		Part1_1.py
+
+------------------------------------------------------------------------------------------------------------------------
+Part II (30marks)
+
+Q4. Experiment with EXTENDED TECHNIQUES (eg: 2 populations, co evolve). Again, compile your results in a table like Q3. 
+
+1. You can come up with your own formulation of a problem. But it must be creative and not found by Google. 
+2. For example, you can optimise the hyperparameters of a Machine Learning problem using EA
+3. You can have 'uneven chromosomes' , or weighted chromosomes. 
+
+No of Exp |EA Techniques 	|Mutation rate |Cross over technique | Population Size | Generations to solve | Time Complexity | .py
+1		co evolution		0.5		one point		100		15000			8hrs       Part2_1.py

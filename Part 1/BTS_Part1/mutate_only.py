@@ -1,30 +1,14 @@
 import random
 import string
+from general import *
 
 # Target string
 target = "HelloWorld!!"
 target_length = len(target)
 characters = string.ascii_letters + string.punctuation # Possible character set
 
-def _main_():
+def _main_(mutation_rate):
     return 0
-
-def calculate_fitness(individual, target):
-    matches = sum(1 for i in range(len(target)) if individual[i] == target[i])
-    return matches / len(target)  # Normalized fitness between 0 and 1
-
-def generate_individual(length):
-    return ''.join(random.choice(characters) for _ in range(length))
-
-def generate_population(size, length):
-    return [generate_individual(length) for _ in range(size)]
-
-def mutate(individual, mutation_rate):
-    mutated = ''.join(
-        (char if random.random() > mutation_rate else random.choice(characters))
-        for char in individual
-    )
-    return mutated
 
 def genetic_algorithm(target, mutation_rate):
     population = generate_population(population_size, len(target))
